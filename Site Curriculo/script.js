@@ -12,7 +12,9 @@ if(idade > 17){
 } else{
     //alert("Vai embora daqui! "+ nome);
 }
+
 //registrando alteração
+//enviando alteração pro github . com
 
 if(nome == "Valdecir" && senha =="123"){
     //alert("Login concedido! "); 
