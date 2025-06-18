@@ -2,7 +2,7 @@
 
 //Uma variável guarda algum valor temporariamente
 //Entrada dos dados
-var nome = "Valdecir";
+var nome = "José";
 var idade = 45;
 var senha = "123";
 
@@ -12,6 +12,7 @@ if(idade > 17){
 } else{
     //alert("Vai embora daqui! "+ nome);
 }
+//registrando alteração
 
 if(nome == "Valdecir" && senha =="123"){
     //alert("Login concedido! "); 
@@ -26,11 +27,9 @@ while(contador < 100){
     console.log(contador);
 }
 
-
 var celular = document.querySelector(".celular"); //icone de menu
 var listamenu = document.querySelector(".menu ul");//itens do menu
 
 celular.addEventListener("click", function(){ 
     listamenu.classList.toggle("mostrarMenu");
  });
-
