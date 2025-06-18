@@ -7,7 +7,7 @@ var idade = 45;
 var senha = "123";
 
 //estrutura de condição
-// ALTERADO NO GIT
+// ALTERADO NO GIT 
 if(idade > 17){
     //alert("Pode votar! "+ nome);
 } else{
