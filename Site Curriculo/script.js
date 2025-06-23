@@ -8,6 +8,7 @@ var senha = "123";
 
 //estrutura de condição
 // ALTERADO NO GIT 
+// Alterado no git 22222
 if(idade > 17){
     //alert("Pode votar! "+ nome);
 } else{
