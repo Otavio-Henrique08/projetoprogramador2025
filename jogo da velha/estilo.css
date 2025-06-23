@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Jersey+15&display=swap');
+
+body{
+    font-family: "Jersey 15", sans-serif;
+}
+.quadrado{
+    width: 200px; /*largura do quadrado*/
+    height: 200px;/*altura do quadrado*/
+    text-align: center; /*centrlizar*/
+    font-size: 160px; /* tamanho da letra*/
+    border-radius: 15px; /* arredondar*/
+    background-color: rgba(89, 196, 110, 0.854);
+    color: black; /*cor da letra*/
+}
+
+.painel{
+    background-color: aquamarine;
+    max-width: 1000px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 100px;
+    border-radius: 30px;
+}
+
+.jogo{
+    margin-left: auto;
+    margin-right: auto;
+}
