@@ -17,5 +17,8 @@ function jogar(celula){
             celula.style.backgroundColor = "blue"
         }
     }
+}
 
+function reiniciar(){
+    window.location.reload();
 }
