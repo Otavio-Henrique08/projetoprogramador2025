@@ -2,7 +2,7 @@
 
 //Uma variável guarda algum valor temporariamente
 //Entrada dos dados
-var nome = "José";
+var nome = "Otávio";
 var idade = 45;
 var senha = "123";
 
