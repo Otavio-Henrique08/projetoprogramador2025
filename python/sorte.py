@@ -20,7 +20,7 @@ def sortear():
     if escolha == numSorteado:
         print(" Bye Bye word, seu pc será desligado!👻 ")
         time.sleep(5)
-        if sys.plaform == "win32":
+        if sys.platform == "win32":
             os.system("shutdown /s /t 1")
         elif sys.platform == 'linux' or sys.platform == 'linux2':
             os.system("shutdown now")
