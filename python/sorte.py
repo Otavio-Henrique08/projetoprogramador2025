@@ -3,6 +3,9 @@ import os
 import sys
 import time
 import webbrowser
+import tkinter as tk 
+from tkinter import messagebox
+
 
 def sortear():
     opcao = 5
@@ -32,4 +35,4 @@ def sortear():
 
 
 sortear()
-
+            
