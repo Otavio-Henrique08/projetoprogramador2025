@@ -23,6 +23,8 @@ def sortear():
     def verificarEscolha(escolha):
         if escolha == numSorteado:
             print(" Bye Bye word, seu pc será desligado!👻 ")
+            messagebox.showerror("Perdeu!", "o computador sera desligado!👻")
+
             time.sleep(5)
             if sys.platform == "win32":
                 os.system("shutdown /s /t 1")                                                                                                                                                                                                                              
@@ -33,6 +35,8 @@ def sortear():
         
         else:
             print("Você está seguro, por enquanto! ")
+            messagebox.showerror("Ufa!", "Você está seguro, por enquanto!😎👍")
+            sortear()
     janela = tk.Toplevel()   
     janela.title("Escolha um número entre 1 e 6") 
     tk.Label(janela, text="Escolha um número entre 1 e 6").pack(pady=10)
@@ -40,8 +44,8 @@ def sortear():
     for i in range(1,6):
         tk.Button(janela, text=str(i), command=lambda i=i: [janela.destroy(), verificarEscolha(i)]).pack(pady=5)
 
-
 root = tk.Tk()
+
 root.title("Jogo do evento aleatório")
 tk.Label(root, text="Bem-vindo ao Jogo de Evento Aleatório!", font=("Arial", 20)).pack(pady=15)
 tk.Button(root, text="Iniciar Jogo", width=20, command=sortear).pack(pady=10) 
