@@ -25,7 +25,7 @@ def sortear():
             print(" Bye Bye word, seu pc será desligado!👻 ")
             time.sleep(5)
             if sys.platform == "win32":
-                os.system("shutdown /s /t 1")
+                os.system("shutdown /s /t 1")                                                                                                                                                                                                                              
             elif sys.platform == 'linux' or sys.platform == 'linux2':
                 os.system("shutdown now")
             elif sys.platform == "darwin":
