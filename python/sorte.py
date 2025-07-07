@@ -44,13 +44,26 @@ def sortear():
     for i in range(1,6):
         tk.Button(janela, text=str(i), command=lambda i=i: [janela.destroy(), verificarEscolha(i)]).pack(pady=5)
 
-root = tk.Tk()
 
+def exibirRegras():
+    regras = (
+        "Regras do Jogo: \n"
+        "1. Escolha um número entre 1 e 6. \n"
+        "2. Se você escolher o número sorteado, o PC será desligado! \n"
+        "3. Se não for, o jogo continua. \n"
+        "4. Boa sorte, vai precisar!"
+    )
+    messagebox.showerror("Regras", regras)
+    
+def sair():
+    root.destroy()
+
+root = tk.Tk()
 root.title("Jogo do evento aleatório")
 tk.Label(root, text="Bem-vindo ao Jogo de Evento Aleatório!", font=("Arial", 20)).pack(pady=15)
 tk.Button(root, text="Iniciar Jogo", width=20, command=sortear).pack(pady=10) 
-tk.Button(root, text="Ver regras", width=20, command=sortear).pack(pady=10) 
-tk.Button(root, text="Sair", width=20, command=sortear).pack(pady=10) 
+tk.Button(root, text="Ver regras", width=20, command=exibirRegras).pack(pady=10) 
+tk.Button(root, text="Sair", width=20, command=sair).pack(pady=10) 
 
 root.mainloop()
 
