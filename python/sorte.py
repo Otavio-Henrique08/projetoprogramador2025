@@ -6,10 +6,23 @@ import webbrowser
 import tkinter as tk 
 from tkinter import messagebox
 
+listaSites = [
+    "https://www.google.com",
+    "https://www.youtube.com",
+    "https://www.devmedia.com.br",
+    "https://www.wikipedia.arg",
+] 
 
+def abrirJanelas():
+    for posicao in listaSites:
+        webbrowser.open(posicao)
+
+
+#FUNÇÃO SORTEAR
 def sortear():
     opcao = 5
     numSorteado = random.randint(1, opcao)
+
     #print("O número sorteado é: ", numSorteado)
 
     # try:
@@ -20,6 +33,8 @@ def sortear():
     # except ValueError as e:
     #     print(f"entrada invalida: {e} tente de novo!")
     #     sortear()
+
+
     def verificarEscolha(escolha):
         if escolha == numSorteado:
             print(" Bye Bye word, seu pc será desligado!👻 ")
@@ -44,7 +59,7 @@ def sortear():
     for i in range(1,6):
         tk.Button(janela, text=str(i), command=lambda i=i: [janela.destroy(), verificarEscolha(i)]).pack(pady=5)
 
-
+#EXIBIR REGRAS
 def exibirRegras():
     regras = (
         "Regras do Jogo: \n"
@@ -55,6 +70,7 @@ def exibirRegras():
     )
     messagebox.showerror("Regras", regras)
     
+#FUNÇÃO SAIR 
 def sair():
     root.destroy()
 
@@ -63,8 +79,7 @@ root.title("Jogo do evento aleatório")
 tk.Label(root, text="Bem-vindo ao Jogo de Evento Aleatório!", font=("Arial", 20)).pack(pady=15)
 tk.Button(root, text="Iniciar Jogo", width=20, command=sortear).pack(pady=10) 
 tk.Button(root, text="Ver regras", width=20, command=exibirRegras).pack(pady=10) 
-tk.Button(root, text="Sair", width=20, command=sair).pack(pady=10) 
-
+tk.Button(root, text="Abrir Navegador", width=20, command=abrirJanelas).pack(pady=10) 
+tk.Button(root, text="Sair", width=20, command=sair).pack(pady=10)
 root.mainloop()
-
 
