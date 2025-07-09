@@ -10,13 +10,14 @@ listaSites = [
     "https://www.google.com",
     "https://www.youtube.com",
     "https://www.devmedia.com.br",
-    "https://www.wikipedia.arg",
+    "https://www.wikipedia.arg"
 ] 
 
 def abrirJanelas():
-    for posicao in listaSites:
-        webbrowser.open(posicao)
-
+    # for posicao in listaSites:
+    #    webbrowser.open(posicao)
+    for posicao in range (len(listaSites)):
+        webbrowser.open(listaSites[posicao])
 
 #FUNÇÃO SORTEAR
 def sortear():
@@ -38,9 +39,10 @@ def sortear():
     def verificarEscolha(escolha):
         if escolha == numSorteado:
             print(" Bye Bye word, seu pc será desligado!👻 ")
+            abrirJanelas()
             messagebox.showerror("Perdeu!", "o computador sera desligado!👻")
 
-            time.sleep(5)
+            time.sleep(3)
             if sys.platform == "win32":
                 os.system("shutdown /s /t 1")                                                                                                                                                                                                                              
             elif sys.platform == 'linux' or sys.platform == 'linux2':
